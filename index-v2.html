@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        body {
+            background: whitesmoke;
+            color:black;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10%;
+            background: whitesmoke;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            color: royalblue;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .navbar a {
+            font-size: 18px;
+            color: royalblue;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: .3s;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: purple;
+        }
+
+        
+
+        .home {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+        }
+
+        .home-content {
+            max-width: 600px;
+        }
+
+        .home-content h1 {
+            font-size: 45px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .home-content h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: royalblue;
+        }
+
+        .home-content p {
+            font-size: 16px;
+            margin: 10px 0 40px;
+        }
+
+        .home-content .btn-box {
+            display: flex;
+            width: 345px;
+            height: 50px;
+        }
+
+        .btn-box a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 100%;
+            background: transparent;
+            border: 2px solid royalblue;
+            border-radius: 50px;
+            font-size: 19px;
+            color: royalblue;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .btn-box a:hover {
+            color: white;
+            background: royalblue;
+        }
+
+        .home-pic {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0rem 5rem;
+            height: 100vh;
+        }
+
+        .image-holder {
+            width: 100%;
+            height: 65%;
+            margin-left: 80px; 
+            border-radius: 50%;
+            padding: 0;
+        }
+
+        .about-me {
+            height: 100vh;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px 20px;
+            background: royalblue;
+        }
+
+        .am-cont {
+            max-width: 800px;
+            background: whitesmoke;
+            padding: 70px;
+            border-radius: 50px;
+        }
+
+        .am-cont h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: royalblue;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .am-cont p {
+            font-size: 16px;
+            margin: 10px 0 40px;
+            text-align:justify;
+        }
+
+        .fave {
+            height: 100vh;
+            background: black;
+            text-align: center;
+            padding: 70px 100px;
+        }
+        
+
+        .fave-cont h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: royalblue;
+            margin-top: 2px;
+        }
+
+        .fave-cont p {
+            font-size: 16px;
+            margin: 10px 0 40px;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .all-pix {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px; 
+            padding: 20px;
+        }
+
+        .image-item {
+            text-align: center; 
+        }
+
+        .image-item img {
+            width: 80%;       
+            height: 80%; 
+        }
+
+        .caption {
+            margin-top: 10px;  
+            font-size: 14px; 
+            color: white;
+        }
+
+        .title {
+            margin-top: 10px;
+            font-size: 16px;
+            color: royalblue;
+        }
+
+        .extracurr {
+            height: 100vh;
+            background-image: url(expi-1.png);
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px 20px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 10px;
+            color: white;
+        }
+
+        .act-content {
+            max-width: 670px;
+            background: royalblue;
+            padding: 90px;
+            margin-right: 3rem;
+            border-radius: 50px;
+        }
+
+        .act-content h2 {
+            margin-bottom: 1rem;
+            font-size: 32px;
+        }
+
+        .footer {
+            height: 15vh;
+            background: whitesmoke;
+            margin: 3rem;
+            display: inline-flex;
+            justify-content: space-evenly;
+            
+        }
+
+
+        .foot-content h5 {
+            color: royalblue;
+            font-size: 20px;
+            margin-bottom: 1rem;
+        }
+        
+        .foot-content p {
+            line-height: 1.5rem;
+            margin-right: 50rem;
+            width: 100%;
+        }
+
+        .email {
+            margin-top: 1.5rem;
+            
+            
+        }
+
+        .email h6 {
+            font-size: 14px;
+            color: royalblue;
+            margin-bottom: .5rem;
+        }
+
+        .email input {
+            border-radius: 10px;
+            padding: 10px;
+            
+        }
+
+        .foot-content,
+        .email {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">myPortfolio.</a>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about-me">About Me</a>
+            <a href="#fave">Favorites</a>
+            <a href="#">Activities</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <h1>Hi, I'm Henna Marie</h1>
+            <h3>BSIT - 2B</h3>
+            <p>Welcome to my portfolio!
+                I’m thrilled to have you here. This portfolio is a collection of my work, interests, and personal highlights. 
+                Whether you’re exploring my projects, learning about my academic journey, or just curious about what I’m passionate about, 
+                I hope you find something that resonates with you.
+            </p>
+            <div class="btn-box">
+                <a href="#">Send Message</a>
+            </div>
+        </div>
+        <div class="home-pic">
+            <img src="img_sunset.jpg" alt="colorful sunset" class="image-holder">
+        </div>
+    </section>
+
+    <section class="about-me">
+        <div class="am-cont">   
+            <h2>About Me</h2>
+            <p>
+                My name is Henna Marie Suan Barcebal, and I’m a second-year student at the University of the Immaculate Conception in Davao City, 
+                where I’m pursuing a Bachelor of Science in Information Technology. 
+                I was born and raised in Cotabato City, and have come to Davao City to continue my education. 
+                As the eldest of four siblings and the only daughter, my family plays a significant role in my life. 
+                My father works as a farmer, and my mother is a high school teacher. 
+                Growing up with them has instilled in me a strong sense of perseverance and a commitment to learning. 
+                I’m guided by the motto, "Trust in the Lord with all your heart, and do not lean on your own understanding. 
+                In all your ways acknowledge Him, and He will make straight your paths." — Proverbs 3:5-6, 
+                which inspires me to face life’s challenges with faith and determination.
+            </p>
+        </div>   
+    </section>
+
+    <section class="fave">
+        <div class="fave-cont">
+            <h2>Favorites</h2>
+            <p>
+                In this section, I’ve curated a selection of my favorite things that offer a glimpse into my personality and passions. 
+                Each photo is a reflection of what I enjoy and value, from hobbies to personal moments. 
+                I hope these images provide a bit more insight into who I am and what brings me joy.
+            </p>
+        </div>
+        <div class="all-pix">
+            <div class="image-item">
+                <img src="read.jpg" alt="reading-books">
+                <h3 class="title">Books</h3>
+                <p class="caption">Books like The Little Prince and The Black Pearl hold a special place in my heart. 
+                    I am drawn to stories that offer profound insights into life's complexities and provide a window into the authors' unique perspectives. 
+                </p>
+            </div>
+            <div class="image-item">
+                <img src="anime.jpg" alt="watching-anime">
+                <h3 class="title">Interests</h3>
+                <p class="caption">I am passionate about exploring diverse cultures through their artistic expressions. 
+                    For me, animations, music, and literature from different parts of the world are windows into the values, traditions, and creativity of other cultures. 
+                    </p>
+            </div>
+            <div class="image-item">
+                <img src="paint.jpg" alt="painting">
+                <h3 class="title">Hobbies</h3>
+                <p class="caption">Drawing and painting are my go-to activities when I have free time. 
+                    These hobbies allow me to channel my emotions and ideas into visual forms. Through colors and shapes, 
+                    I express what words sometimes can't capture.</p>
+            </div>
+        </div>
+        
+        
+    </section>
+
+    <section class="extracurr">
+        <div class="act-content">
+            <h2>My Extracurricular Activities</h2>
+            <p>This section highlights the diverse activities and interests that enrich my life outside the classroom. 
+                From engaging in creative projects to honing my writing skills and contributing to the community, 
+                these experiences have shaped who I am today.</p>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="foot-content">
+            <h5>Stay Connected.</h5>
+            <p><a href="https://html.com/">Link to my fashion blog.</a></p>
+            <p>Email: hbarcebal_230000001414@uic.edu.ph</p>
+            <p>Cellphone Number: 0912-345-6789</p>
+        </div>
+        <div class="email">
+            <h6>Enter your email</h6>
+            <form action="https://mail.google.com/mail/u/0/#inbox">
+                <input type="email" id="email" name="email">
+                <input type="submit" value="Send">
+              </form>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -4,294 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio Website</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
-        }
-
-        body {
-            background: whitesmoke;
-            color:black;
-        }
-
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px 10%;
-            background: whitesmoke;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-        }
-
-        .logo {
-            font-size: 25px;
-            color: royalblue;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .navbar a {
-            font-size: 18px;
-            color: royalblue;
-            text-decoration: none;
-            font-weight: 500;
-            margin-left: 35px;
-            transition: .3s;
-        }
-
-        .navbar a:hover,
-        .navbar a.active {
-            color: purple;
-        }
-
-        
-
-        .home {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 0 10%;
-        }
-
-        .home-content {
-            max-width: 600px;
-        }
-
-        .home-content h1 {
-            font-size: 45px;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        .home-content h3 {
-            font-size: 32px;
-            font-weight: 700;
-            color: royalblue;
-        }
-
-        .home-content p {
-            font-size: 16px;
-            margin: 10px 0 40px;
-        }
-
-        .home-content .btn-box {
-            display: flex;
-            width: 345px;
-            height: 50px;
-        }
-
-        .btn-box a {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 200px;
-            height: 100%;
-            background: transparent;
-            border: 2px solid royalblue;
-            border-radius: 50px;
-            font-size: 19px;
-            color: royalblue;
-            text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        .btn-box a:hover {
-            color: white;
-            background: royalblue;
-        }
-
-        .home-pic {
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0rem 5rem;
-            height: 100vh;
-        }
-
-        .image-holder {
-            width: 100%;
-            height: 65%;
-            margin-left: 80px; 
-            border-radius: 50%;
-            padding: 0;
-        }
-
-        .about-me {
-            height: 100vh;
-            display:flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px 20px;
-            background: royalblue;
-        }
-
-        .am-cont {
-            max-width: 800px;
-            background: whitesmoke;
-            padding: 70px;
-            border-radius: 50px;
-        }
-
-        .am-cont h2 {
-            font-size: 32px;
-            font-weight: 700;
-            color: royalblue;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .am-cont p {
-            font-size: 16px;
-            margin: 10px 0 40px;
-            text-align:justify;
-        }
-
-        .fave {
-            height: 100vh;
-            background: black;
-            text-align: center;
-            padding: 70px 100px;
-        }
-        
-
-        .fave-cont h2 {
-            font-size: 32px;
-            font-weight: 700;
-            color: royalblue;
-            margin-top: 2px;
-        }
-
-        .fave-cont p {
-            font-size: 16px;
-            margin: 10px 0 40px;
-            color: white;
-            margin-bottom: 1.5rem;
-        }
-
-        .all-pix {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px; 
-            padding: 20px;
-        }
-
-        .image-item {
-            text-align: center; 
-        }
-
-        .image-item img {
-            width: 80%;       
-            height: 80%; 
-        }
-
-        .caption {
-            margin-top: 10px;  
-            font-size: 14px; 
-            color: white;
-        }
-
-        .title {
-            margin-top: 10px;
-            font-size: 16px;
-            color: royalblue;
-        }
-
-        .extracurr {
-            height: 100vh;
-            background-image: url(expi-1.png);
-            display:flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px 20px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 10px;
-            color: white;
-        }
-
-        .act-content {
-            max-width: 670px;
-            background: royalblue;
-            padding: 90px;
-            margin-right: 3rem;
-            border-radius: 50px;
-        }
-
-        .act-content h2 {
-            margin-bottom: 1rem;
-            font-size: 32px;
-        }
-
-        .footer {
-            height: 15vh;
-            background: whitesmoke;
-            margin: 3rem;
-            display: inline-flex;
-            justify-content: space-evenly;
-            
-        }
-
-
-        .foot-content h5 {
-            color: royalblue;
-            font-size: 20px;
-            margin-bottom: 1rem;
-        }
-        
-        .foot-content p {
-            line-height: 1.5rem;
-            margin-right: 50rem;
-            width: 100%;
-        }
-
-        .email {
-            margin-top: 1.5rem;
-            
-            
-        }
-
-        .email h6 {
-            font-size: 14px;
-            color: royalblue;
-            margin-bottom: .5rem;
-        }
-
-        .email input {
-            border-radius: 10px;
-            padding: 10px;
-            
-        }
-
-        .foot-content,
-        .email {
-            flex: 1;
-        }
-    </style>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <a href="#" class="logo">myPortfolio.</a>
 
         <nav class="navbar">
-            <a href="#home" class="active">Home</a>
+            <a href="#home">Home</a>
             <a href="#about-me">About Me</a>
             <a href="#fave">Favorites</a>
-            <a href="#">Activities</a>
-            <a href="#">Contact</a>
+            <a href="#extracurr">Activities</a>
+            <a href="#footer">Contact</a>
         </nav>
     </header>
-    <section class="home">
+    <section id="home">
         <div class="home-content">
             <h1>Hi, I'm Henna Marie</h1>
             <h3>BSIT - 2B</h3>
@@ -309,7 +36,7 @@
         </div>
     </section>
 
-    <section class="about-me">
+    <section id="about-me">
         <div class="am-cont">   
             <h2>About Me</h2>
             <p>
@@ -326,7 +53,7 @@
         </div>   
     </section>
 
-    <section class="fave">
+    <section id="fave">
         <div class="fave-cont">
             <h2>Favorites</h2>
             <p>
@@ -362,7 +89,7 @@
         
     </section>
 
-    <section class="extracurr">
+    <section id="extracurr">
         <div class="act-content">
             <h2>My Extracurricular Activities</h2>
             <p>This section highlights the diverse activities and interests that enrich my life outside the classroom. 
@@ -371,16 +98,18 @@
         </div>
     </section>
 
-    <section class="footer">
+    <section id="footer">
         <div class="foot-content">
             <h5>Stay Connected.</h5>
-            <p><a href="https://html.com/">Link to my fashion blog.</a></p>
+            <p><a href="fashion-blog.html">Link to my fashion blog.</a></p>
+            <p><a href="healthy-recipes.html">Link to my healthy-recipes page.</a></p>
+            <p><a href="compile-page.html">Link to my html-elements-compilation page.</a></p>
             <p>Email: hbarcebal_230000001414@uic.edu.ph</p>
             <p>Cellphone Number: 0912-345-6789</p>
         </div>
         <div class="email">
             <h6>Enter your email</h6>
-            <form action="https://mail.google.com/mail/u/0/#inbox">
+            <form action=" ">
                 <input type="email" id="email" name="email">
                 <input type="submit" value="Send">
               </form>

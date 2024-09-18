@@ -48,8 +48,9 @@
 
         #home {
             height: 100vh;
-            display: flex;
+            justify-content: center;
             align-items: center;
+            display: flex;  
             padding: 0 10%;
         }
 
@@ -199,31 +200,62 @@
         }
 
         #extracurr {
-            height: 100vh;
-            background-image: url(expi-1.png);
-            display:flex;
-            align-items: center;
+            position: relative;
+            display: flex;
             justify-content: center;
-            text-align: center;
-            padding: 20px 20px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 10px;
-            color: white;
+            align-items: center;
+            padding: 20px;
+            height: 100vh;
+            background-color: whitesmoke;
         }
-
+        
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 10px;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .photo-grid img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
         .act-content {
-            max-width: 670px;
-            background: royalblue;
-            padding: 90px;
-            margin-right: 3rem;
-            border-radius: 50px;
+            position: absolute;
+            background-color: royalblue;
+            color: white;
+            padding: 30px;
+            max-width: 600px;
+            text-align: center;
+            border-radius: 20px;
+            z-index: 10;
         }
-
+        
         .act-content h2 {
-            margin-bottom: 1rem;
-            font-size: 32px;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        
+        .act-content p {
+            font-size: 16px;
+        }
+        
+        
+
+        @media (max-width: 768px) {
+            .photo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        
+            .act-content {
+                padding: 20px;
+                font-size: 14px;
+            }
         }
 
         #footer {
@@ -270,3 +302,13 @@
         .email {
             flex: 1;
         }
+
+.intro {
+    height: 100vh;
+}
+
+.profile-pic img {
+    width: 500px;
+    height: 500px;
+}
+

@@ -1,0 +1,51 @@
+h1 {
+    margin-top: 30px;
+    color: white;
+    text-align: center;
+}
+
+a {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    text-align: center;
+}
+
+img {
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    align-items: center;
+    display: block;
+    margin: 20px auto;
+    padding: 30px;
+}
+
+body {
+    background-color: royalblue;
+}
+
+@media screen and (max-width: 768px) {
+    img {
+        height: 300px;
+        width: 300px;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    img {
+        display: none;
+    }
+
+    h1 {
+        color: royalblue;
+    }
+
+    body {
+        background-color: white;
+        transition: .3s;
+    }
+}

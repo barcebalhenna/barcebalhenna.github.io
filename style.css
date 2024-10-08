@@ -298,6 +298,8 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 150px;
+        padding-bottom: 20px;
     }
 
     .home-content h1 {
@@ -341,6 +343,8 @@ body {
 
     #fave {
         padding: 20px 10px;
+        height:fit-content;
+        overflow: hidden;
     }
 
     .all-pix {
@@ -357,11 +361,25 @@ body {
 
     .am-cont {
         padding: 40px;
+        height:90vh;
+    }
+
+    .am-cont p {
+        font-size: 14px;
+    }
+
+    .photo-grid {
+        padding-top: 100px;
+        height: fit-content;
     }
 
     .photo-grid img {
-        width: 100%;
-        height: auto;
+        width: 150px;
+        height: 150px;
+    }
+
+    .extracurri {
+        overflow: hidden;
     }
 
     #footer {

@@ -15,8 +15,10 @@
             <a href="#about-me">About Me</a>
             <a href="#fave">Favorites</a>
             <a href="#extracurr">Activities</a>
-            <a href="#footer">Contact</a>
         </nav>
+
+        <button id="dark-mode-toggle">🌙 Dark Mode</button>
+
     </header>
     <section id="home" class="home-page">
         <div class="home-content">
@@ -28,7 +30,8 @@
                 I hope you find something that resonates with you.
             </p>
             <div class="btn-box">
-                <a href="#">Send Message</a>
+                <a href="mailto:barcebalhenna@gmail.com" target="_blank">Send Message</a>
+
             </div>
         </div>
         <div class="home-pic">
@@ -90,28 +93,29 @@
     </section>
 
     <section class="extracurri" id="extracurr">
-        <div class="photo-grid">
-            <img src="photo-grid/10.jpg">
-            <img src="photo-grid/2.jpg">
-            <img src="photo-grid/3.jpg">
-            <img src="photo-grid/4.jpg">
-            <img src="photo-grid/5.jpg">
-            <img src="photo-grid/6.jpg">
-            <img src="photo-grid/7.jpg">
-            
-            <img src="photo-grid/9.jpg">
-            <img src="photo-grid/1.jpg">
-            <img src="photo-grid/11.jpg">
-        </div>
-        <div class="act-content">
-            <h2>My Extracurricular Activities</h2>
-            <p>This section highlights the diverse activities and interests that enrich my life outside the classroom. 
+        <div class="grid-container">
+            <div class="grid-item item1"></div>
+            <div class="grid-item item2"></div>
+            <div class="grid-item item3"></div>
+            <div class="grid-item item4"></div>
+            <div class="grid-item item5"></div>
+            <div class="grid-item item6">
+                <h2>My Extracurricular Activities</h2>
+                <p>This section highlights the diverse activities and interests that enrich my life outside the classroom. 
                 From engaging in creative projects to honing my writing skills and contributing to the community, 
                 these experiences have shaped who I am today.</p>
-        </div>
+            </div>
+          
+            <div class="grid-item item8"></div>
+            <div class="grid-item item9"></div>
+            <div class="grid-item item10"></div>
+            <div class="grid-item item11"></div>
+            <div class="grid-item item12"></div>
+          </div>
+        
     </section>
 
-    <section id="footer">
+    <footer id="footer">
         <div class="foot-content">
             <h5>Stay Connected.</h5>
             <p><a href="my-activities.html">Link to my WebDev Exercises.</a></p>
@@ -125,12 +129,8 @@
                 <input type="submit" value="Send">
               </form>
         </div>
-    </section>
+    </footer>
 
-    <section class="toggle-btn">
-        <input class="chkbx" type="checkbox" id="darkmode-toggle"/>
-        <label for="darkmode-toggle"></label>
-    </section>
-
+    <script src="script.js"></script>
 </body>
 </html>

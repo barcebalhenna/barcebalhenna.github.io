@@ -202,51 +202,73 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     height: 100vh;
     background-color: whitesmoke;
 }
 
-.photo-grid {
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2px;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-}
+  }
 
-.photo-grid img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.act-content {
-    position: absolute;
-    background-color: royalblue;
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
     color: white;
-    padding: 30px;
-    max-width: 600px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .item1 { background-image: url('photo-grid/1.jpg'); }
+  .item2 { background-image: url('photo-grid/2.jpg'); }
+  .item3 { background-image: url('photo-grid/6.jpg'); }
+  .item4 { background-image: url('photo-grid/4.jpg'); }
+  .item5 { background-image: url('photo-grid/5.jpg'); }
+  
+  .item8 { background-image: url('photo-grid/8.jpg'); }
+  .item9 { background-image: url('photo-grid/9.jpg'); }
+  .item10 { background-image: url('photo-grid/10.jpg'); }
+  .item11 { background-image: url('photo-grid/11.jpg'); }
+  .item12 { background-image: url('photo-grid/7.jpg'); }
+
+  .item6 {
+    grid-column: 2 / 4;
+    background-color: royalblue;
+    padding: 1rem;
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: left;
+    display: flex;       
+    flex-direction: column; 
+    justify-content: center; 
+    gap: 0.5rem; 
+  }
+
+  .item6 h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .item6 p {
+    margin: 0;
+    line-height: 1.5;
+    padding: 1rem;
     text-align: center;
-    border-radius: 20px;
-    z-index: 10;
-}
+  }
 
-.act-content h2 {
-    margin-bottom: 15px;
-    font-size: 24px;
-}
-
-.act-content p {
-    font-size: 16px;
-}
-
-#footer {
+footer {
     height: 30vh;
+    width: 100%;
     background: whitesmoke;
-    margin: 3rem;
+    padding: 30px;
     display: inline-flex;
     justify-content: space-evenly;
     transition: 0.3s;
@@ -285,55 +307,56 @@ body {
 }
 
 
-label {
-    width: 120px;
-    height: 50px;
-    position: relative;
-    display: block;
-    background: #ebebeb;
-    border-radius: 50px;
-    box-shadow: inset 0px 3px 10px rgba(0,0,0,0.4), inset 0px -3px 10px rgba(255,255,255,0.4);
+button {
+    padding: 0.5rem 1rem;
+    border: none;
     cursor: pointer;
-    transition: 0.3s;
-}
+    background-color: royalblue;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  body.dark-mode header {
+    background-color: #1e1e1e;
+  }
 
-label:after {
-    content: "";
-    width: 45px;
-    height: 45px;
-    position: absolute;
-    top: 2px;
-    left: 3px;
-    background: linear-gradient(180deg,#ffcc89,#d8860b);
-    border-radius: 50px;
-    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
+  body.dark-mode footer {
+    background-color: #1e1e1e;
+  }
+  
+  body.dark-mode button {
+    background-color: #333;
+    color: #ffffff;
+  }
+  
+  body.dark-mode .home-page {
+    background-color: #333;
+    color: #ffffff;
+  }
 
-label:active:after {
-    width: 70px;
-}
+  body.dark-mode .am-cont {
+    background-color: #333;
+    color: #ffffff;
+  }
 
- #darkmode-toggle {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-}
+  body.dark-mode .grid-container {
+    background-color: #333;
+    color: #ffffff;
+  }
 
-#darkmode-toggle:checked + label {
-    background: #242424;
-}
+  body.dark-mode .item6 {
+    background-color: #333;
+    color: #ffffff;
+  }
 
-#darkmode-toggle:checked + label:after {
-    left: 115px;
-    transform: translateX(-100%);
-    background: linear-gradient(180deg,#777,#3a3a3a);
-}
-
-#darkmode-toggle:checked + label + #home {
-    background: #242424;
-}
-
+/* Device Responsiveness */
 @media screen and (max-width: 768px) {
 
     * {
@@ -352,6 +375,7 @@ label:active:after {
         align-items: center;
         margin-top: 150px;
         padding-bottom: 20px;
+        height: auto;
     }
 
     .home-content h1 {
@@ -407,11 +431,12 @@ label:active:after {
 
     #about-me {
         padding: 10px;
+        height: auto;
     }
 
     .am-cont {
         padding: 40px;
-        height:90vh;
+        height:auto;
     }
 
     .am-cont p {

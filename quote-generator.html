@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote Generator</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .quote-container {
+      background: linear-gradient(145deg, #6c7cfa, #2e5bd5);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    #quote {
+      font-size: 1.8rem;
+      font-style: italic;
+      color: white;
+      margin-bottom: 20px;
+      line-height: 1.4;
+      padding: 10px 20px;
+    }
+
+    #author {
+      font-size: 1.2rem;
+      color: #ffffff;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    #btn {
+      background-color: whitesmoke;
+      color: black;
+      border: none;
+      font-size: 1.1rem;
+      padding: 12px 25px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #btn:hover {
+      background-color: lightslategray;
+      color: whitesmoke;
+    }
+
+    #quote-container {
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="quote-container">
+    <p id="quote">Click the button to get a random quote!</p>
+    <p id="author"></p>
+    <button id="btn">Get Quote</button>
+  </div>
+  <script src="quote-gen.js"></script>
+</body>
+</html>

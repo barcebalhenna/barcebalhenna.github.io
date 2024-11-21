@@ -4,16 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Links to WebDev Practices</title>
+    <link rel="stylesheet" href="my-activities-css.css">
 </head>
 <body>
-    <h1>WebDev Exercises</h1>
-            <p><a href="css-cert.html">Learn CSS.</a></p>
-            <p><a href="mq-demo.html">Media Query Demo.</a></p>
-            <p><a href="fashion-blog.html">Link to my fashion blog.</a></p>
-            <p><a href="healthy-recipes.html">Link to my healthy-recipes page.</a></p>
-            <p><a href="woodruff_portfolio.html">Link to my Olivia Woodruff Portfolio.</a></p>
-            <p><a href="compile-page.html">Link to my html-elements-compilation page.</a></p>
+    <div class="sidebar-container">
+        <button id="toggle-btn" class="toggle-btn">☰ Menu</button>
+        <div id="sidebar" class="sidebar">
+            <h2>WebDev Exercises</h2>
+            <p><a href="quote-generator.html" data-target="quote-generator.html">Quote Generator API</a></p>
+            <p><a href="learn-js.html" data-target="learn-js.html">Learn JavaScript</a></p>
+            <p><a href="css-cert.html" data-target="css-cert.html">Learn CSS</a></p>
+            <p><a href="mq-demo.html" data-target="mq-demo.html">Media Query Demo</a></p>
+            <p><a href="fashion-blog.html" data-target="fashion-blog.html">Fashion Blog</a></p>
+            <p><a href="healthy-recipes.html" data-target="healthy-recipes.html">Healthy Recipes</a></p>
+            <p><a href="woodruff_portfolio.html" data-target="woodruff_portfolio.html">Olivia Woodruff Portfolio</a></p>
+            <p><a href="compile-page.html" data-target="compile-page.html">HTML Compilation</a></p>
+            <p><a href="index.html" data-target="index.html">Back to Home</a></p>
+        </div>
+    </div>
 
-<p><a href="index.html">Back to main page.</a></p>
+    <div class="content-container">
+        <iframe id="content-frame" src="" frameborder="0"></iframe>
+    </div>
+
+    <script src="acts-menu.js"></script>
 </body>
 </html>
